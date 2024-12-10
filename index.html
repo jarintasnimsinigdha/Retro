@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-tro Forum</title>
+    <link rel="shortcut icon" href="images/logo.png" type="image/png">
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/de58b7984c.js" crossorigin="anonymous"></script>
+
+    <!-- daisy ui and tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                'primary': '#12132D',
+                'secondary':'#797DFC',
+                'third': 'rgba(18, 19, 45, 0.6)'
+              },
+              backgroundImage: {
+                'banner': "url('images/bannger.pn')",
+                'tprogram': "url('Images/3.png')",
+                'sprogram': "url('Images/4.png')"
+              }
+            }
+          }
+        }
+      </script>
+
+      <!-- custom css -->
+      <style>
+        body {
+            font-family: "Mulish", sans-serif;
+        }
+        .second-font{
+            font-family: "Inter", sans-serif;
+        }
+        .custom-line-height {
+            line-height: 8px;
+        }
+      </style>
+</head>
+<body>
+    <header class="container mx-auto px-5 lg:px-32">
+        <!-- Navbar -->
+        <nav class="my-4 lg:my-12">
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden p-0 pr-4">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                        </div>
+                        <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-base font-semibold flex flex-row" >
+                            <button class="btn btn-circle border border-third mr-3 tooltip" data-tip="Home"><i class="fa-solid fa-house"></i></button>
+                            <button class="btn btn-circle border border-third mr-3 tooltip" data-tip="Write"><i class="fa-solid fa-pencil"></i></button>
+                            <button class="btn btn-circle border border-third mr-3 tooltip" data-tip="Register"><i class="fa-solid fa-user-plus"></i></button>
+                            <button class="btn btn-circle border border-third mr-3 tooltip" data-tip="Bookmark"><i class="fa-regular fa-flag"></i></button>
+                        </ul>
+                      </div>
+                    <h2 class="text-2xl lg:text-4xl font-extrabold text-primary">E-tro Forum</h2>
+                </div>
+                <div class="navbar-end items-center gap-3">
+                    <ul class="menu menu-horizontal px-1 text-base font-semibold text-primary opacity-60 hidden lg:flex">
+                        <button class="btn btn-circle border border-third mr-3 tooltip" data-tip="Home"><i class="fa-solid fa-house"></i></button>
+                        <button class="btn btn-circle border border-third mr-3 tooltip" data-tip="Write"><i class="fa-solid fa-pencil"></i></button>
+                        <button class="btn btn-circle border border-third mr-3 tooltip" data-tip="Register"><i class="fa-solid fa-user-plus"></i></button>
+                        <button class="btn btn-circle border border-third mr-3 tooltip" data-tip="Bookmark"><i class="fa-regular fa-flag"></i></button>
+                    </ul>
+                    <button class="btn bg-secondary rounded-full px-10" href="#ticket-section">
+                        <H2 class="text-white font-bold text-lg">Sign In</H2>
+                    </button>
+                </div>
+              </div>
+        </nav>
+        <!-- Banner -->
+        <div class="relative">
+            <div class="w-full h-full lg:h-[550px] bg-primary bg-center rounded-3xl">
+                <div class="absolute bottom-0 w-full">
+                    <img class="w-full" src="images/bgbanner.png" alt="">
+                </div>
+                <div class="flex flex-col lg:flex-row gap-4 p-6 lg:p-28 justify-between">
+                    <div class="text-left">
+                        <h2 class="text-2xl lg:text-6xl text-white font-extrabold pb-6 custom-line-height">Welcome To The <br> <span class="text-secondary">E-tro</span> Forum</h2>
+                        <p class="text-lg text-white font-normal pb-4 lg:pb-8 custom-line-height">Share your favorite opinion and win and wp <br> forum coffee mug !</p>
+                        <!-- Search functionality -->
+                        <label class="input input-bordered flex items-center  rounded-full  h-full lg:h-14">
+                            <input id="searchInput" type="text" class="z-10 grow" placeholder="Search anything"/>
+                            <button onclick="search()" class="z-10 badge bg-secondary text-white w-full lg:w-28 h-12 font-bold">Search</button>
+                        </label>
+                    </div>
+                    <div class="bg-white rounded-3xl h-72 w-full lg:w-[370px] p-12">
+                        <table class="table-auto text-xl font-bold text-third w-full h-full">
+                            <tbody>
+                                <tr>
+                                    <td class="pr-2 lg:pr-8">Registered Users </td>
+                                    <td>01</td>
+                                </tr>
+                                <tr>
+                                    <td>Forum</td>
+                                    <td>05</td>
+                                </tr>
+                                <tr>
+                                    <td>Topics</td>
+                                    <td>01</td>
+                                </tr>
+                                <tr>
+                                    <td>Replies</td>
+                                    <td>01</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- Lets Discuss section -->
+        <section class="mt-10 lg:mt-28 px-5 lg:px-32">
+            <div class="flex flex-col gap-6 text-center">
+                <h2 class="font-extrabold text-4xl">Let's Discuss</h2>
+                <p class="font-medium text-lg text-third">Yes, you can run unit tests and see the results directly within the app. <br> The integrated testing features allow for a streamlined .</p>
+            </div>
+            <!-- Loading spinner -->
+            <div id="spinner" class="text-center hidden items-center mt-8 lg:mt-12">
+                <span class="loading loading-dots bg-secondary w-12 h-12"></span>
+            </div>
+            <!-- Lets discuss Cards Start -->
+            <div class="mt-8 lg:mt-12 flex flex-col lg:flex-row gap-6">
+                <!-- main cards -->
+                <div id="main-cards-container" class="w-11/12 flex flex-col gap-6">
+                </div>
+                <!-- side cards -->
+                <div id="sidecard" class="bg-[#12132D0D] rounded-3xl h-auto p-6 flex flex-col grow">
+                    <div class="flex justify-between lg:gap-32">
+                        <h2 class="text-2xl font-bold text-primary">Title</h2>
+                        <p class="text-xl font-bold text-third"><i class="fa-solid fa-check" style="color: rgb(0, 197, 0);"></i> Mark as read (<span id="totalRead">0</span>)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Join our forum -->
+        <section class="mt-10 lg:mt-28 px-5 lg:px-32">
+            <div class="w-full h-full lg:h-[400px] bg-primary bg-center rounded-3xl">
+                <div class="flex flex-col lg:flex-row py-10 lg:py-20 px-8 lg:pl-20 lg:pr-12 gap-20">
+                    <div class="text-left">
+                        <h2 class="text-2xl lg:text-6xl text-white font-extrabold pb-6 custom-line-height">Join Our Forum</h2>
+                        <p class="text-lg text-white opacity-80 font-normal pb-8 lg:pb-8 custom-line-height">Share your favorite opinion and win and wp forum coffee mug! You can run unit tests and see the results directly within the app. </p>
+                        <button class="badge bg-secondary text-white text-2xl font-bold px-10 py-7 border-0">Register Now</button>
+                    </div>
+                    <div>
+                        <img src="images/joinforum.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Latest posts section -->
+        <section class="mt-10 lg:mt-28 px-5 lg:px-32">
+            <!-- info -->
+            <div class="flex flex-col gap-6 text-center">
+                <h2 class="font-extrabold text-4xl">Latest Posts</h2>
+                <p class="font-medium text-lg text-third">You can run unit tests and view the results directly within the app. <br>The integrated testing features allow for a streamlined.</p>
+            </div>
+            <!-- main card -->
+            <div id="latestpostscontainer" class="flex flex-col lg:flex-row mt-8 lg:mt-12 gap-10">
+            </div>
+        </section>       
+    </main>
+    <!-- Footer -->
+    <footer class="footer footer-center bg-[#12132D1A] text-primary mt-10 lg:mt-28 py-20 px-6 lg:px-0">
+        <aside>
+            <h2 class="text-2xl lg:text-4xl font-extrabold pb-2">E-tro Forum</h2>
+          <p class="font-bold text-third">
+            E-tro Forum is an online platform that provides a space for sharing news, posts, and <br> articles on various topics. Users can engage in discussions, share insights, <br> and explore a wide range of content on the platform.
+          </p> 
+        </aside> 
+        <nav class="pt-6">
+          <div class="grid grid-flow-col gap-4">
+            <i class="fa-brands fa-facebook fa-2xl"></i>
+            <i class="fa-brands fa-twitter fa-2xl"></i>
+            <i class="fa-brands fa-square-instagram fa-2xl"></i>
+            <i class="fa-brands fa-github fa-2xl"></i>
+          </div>
+        </nav>
+        <aside class="pt-16 text-third">
+            <hr>
+            <p>Copyright © 2024 - All right reserved</p>
+        </aside>
+      </footer>
+
+    <!-- Scripts -->
+    <script src="scripts/utility.js"></script>
+    
+</body>
+</html>
